@@ -14,7 +14,7 @@ export const userSchema = z.object({/// تعریف یک ابجکت از z که �
 export type RegisterFormData2 = z.infer<typeof userSchema> /// ساخت یک تایپ اختصاصی که بر اساس قوانین ابجکتی که در بالا با درنظر گرفتن قوانین zod ساختیم
 
 
-const exsitingUser = () => {
+const ExsitingUser = () => {
     const Router = useRouter()
     const { setUser2 } = useUserStore()
 
@@ -66,4 +66,4 @@ const exsitingUser = () => {
     )
 }
 
-export default exsitingUser;
+export default ExsitingUser;
