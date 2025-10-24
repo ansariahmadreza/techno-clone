@@ -5,7 +5,7 @@ import { RootCarousel } from "../components/mainPage/helper/swipercarsouel";
 
 export interface RootProps {///بعد از اینکه وارد یک صفحه داینامیک میشی از این طریق id رو میگیری و اطلاعات محصول رو بالا میاری
     params: Promise<{ id: string }>
-    searchParams: Promise<{}>
+    searchParams: Promise<object>
 };
 const Store = async ({ params }: RootProps) => {
 
