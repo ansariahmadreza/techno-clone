@@ -4,7 +4,7 @@ import { RootCarousel } from "../../components/mainPage/helper/swipercarsouel";
 
 interface RootProps {
     params: Promise<{ id: string }>
-    searchParams: Promise<{}>
+    searchParams: Promise<object>
 }
 const Store = async ({ params }: RootProps) => {
     const { id } = await params;

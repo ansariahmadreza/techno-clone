@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export interface IStoreProps {
-  params: Promise<{}>;
+  params: Promise<object>;
   searchParams: Promise<{ page: string; per_page: string; title: string }>;
 }
 
