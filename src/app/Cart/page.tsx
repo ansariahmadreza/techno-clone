@@ -30,11 +30,11 @@ const Cart = () => {
     }, [])
 
     /// قیمت کل بدون تخفیف
-    const totalPrice = ProductItems.reduce((total, item) => {
+    const totalPrice = Array.isArray(ProductItems) ? ProductItems.reduce((total, item) => {
         const selectedProduct = products.find(p => p.id === item.id.toString())
         const selectedCarousel = Carousel.find(c => c.id === item.id.toString())
         return total + (selectedProduct?.Price || selectedCarousel?.Price || 0) * item.qty
-    }, 0);
+    }, 0) : 0;
 
     useEffect(() => {
         if (!loading) {

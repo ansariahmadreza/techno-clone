@@ -77,14 +77,18 @@ const ShoppingCartContextProvider = ({ children }: ShoppingCartContextProvider) 
         });
     };
     useEffect(() => {
-        const storedCartItems = localStorage.getItem("cartItems")
-        if (storedCartItems) {
-            setProductItems(JSON.parse(storedCartItems))
+        if (typeof window !== undefined) {
+            const storedCartItems = localStorage.getItem("cartItems")
+            if (storedCartItems) {
+                setProductItems(JSON.parse(storedCartItems))
+            }
         }
     }, [])
 
     useEffect(() => {
-        localStorage.setItem("cartItems", JSON.stringify(ProductItems))
+        if (typeof window !== undefined) {
+            localStorage.setItem("cartItems", JSON.stringify(ProductItems))
+        }
     }, [ProductItems])
 
     return (
