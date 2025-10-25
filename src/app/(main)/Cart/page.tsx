@@ -64,18 +64,22 @@ const Cart = () => {
                         if (!product && !carouselItem) return null  /// اگر محصولی نبود null برگردون
                         if (carouselItem?.DiscountedPrice) {
                             return (
-                                <div key={item.id}>
-                                    <CartItemRootCarousel info={carouselItem} qty={item.qty} />
-                                </div>
+                                <Suspense>
+                                    <div key={item.id}>
+                                        <CartItemRootCarousel info={carouselItem} qty={item.qty} />
+                                    </div>
+                                </Suspense>
                             )
                         }
                         //// وقتی دوتا حالت کاملا متفاوت داریم دوتا return باید باشه
 
                         // ! یعنی قطعا وجود داره
                         return (
-                            <div key={item.id} >
-                                <CartItem info={product!} qty={item.qty} />
-                            </div>
+                            <Suspense>
+                                <div key={item.id} >
+                                    <CartItem info={product!} qty={item.qty} />
+                                </div>
+                            </Suspense>
                         )
                     })}
                     <div className="mt-5">
