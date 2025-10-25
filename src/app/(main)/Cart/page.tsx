@@ -1,6 +1,6 @@
 "use client"
 import { useShoppingCartContext } from "../Context/ShoppingCartContext";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import Countainer from "../../Container";
 import { RootCarousel } from "../components/mainPage/helper/swipercarsouel";
 import CartItem from "../components/(products)/CartItems";
@@ -55,38 +55,40 @@ const Cart = () => {
 
     return (
         <section >
-            <Countainer>
-                <h2 className="font-bold">سبد خرید</h2>
-                {ProductItems.map((item) => {
-                    const product = products.find(p => p.id === item.id.toString())
-                    const carouselItem = Carousel.find(c => c.id === item.id.toString())
-                    if (!product && !carouselItem) return null  /// اگر محصولی نبود null برگردون
-                    if (carouselItem?.DiscountedPrice) {
+            <Suspense>
+                <Countainer>
+                    <h2 className="font-bold">سبد خرید</h2>
+                    {ProductItems.map((item) => {
+                        const product = products.find(p => p.id === item.id.toString())
+                        const carouselItem = Carousel.find(c => c.id === item.id.toString())
+                        if (!product && !carouselItem) return null  /// اگر محصولی نبود null برگردون
+                        if (carouselItem?.DiscountedPrice) {
+                            return (
+                                <div key={item.id}>
+                                    <CartItemRootCarousel info={carouselItem} qty={item.qty} />
+                                </div>
+                            )
+                        }
+                        //// وقتی دوتا حالت کاملا متفاوت داریم دوتا return باید باشه
+
+                        // ! یعنی قطعا وجود داره
                         return (
-                            <div key={item.id}>
-                                <CartItemRootCarousel info={carouselItem} qty={item.qty} />
+                            <div key={item.id} >
+                                <CartItem info={product!} qty={item.qty} />
                             </div>
                         )
-                    }
-                    //// وقتی دوتا حالت کاملا متفاوت داریم دوتا return باید باشه
-
-                    // ! یعنی قطعا وجود داره
-                    return (
-                        <div key={item.id} >
-                            <CartItem info={product!} qty={item.qty} />
-                        </div>
-                    )
-                })}
-                <div className="mt-5">
-                    <h3>قیمت کل: <span>{formatNumberWithCommas(totalPrice)} تومان</span></h3>
-                    {discountPrice > 0 && (
-                        <div>
-                            <h3>قیمت کل با تخفیف: <span>{formatNumberWithCommas(finalPrice)} تومان</span></h3>
-                            <h3>تخفیف کل: <span>{formatNumberWithCommas(discountPrice)} تومان</span></h3>
-                        </div>
-                    )}
-                </div>
-            </Countainer>
+                    })}
+                    <div className="mt-5">
+                        <h3>قیمت کل: <span>{formatNumberWithCommas(totalPrice)} تومان</span></h3>
+                        {discountPrice > 0 && (
+                            <div>
+                                <h3>قیمت کل با تخفیف: <span>{formatNumberWithCommas(finalPrice)} تومان</span></h3>
+                                <h3>تخفیف کل: <span>{formatNumberWithCommas(discountPrice)} تومان</span></h3>
+                            </div>
+                        )}
+                    </div>
+                </Countainer>
+            </Suspense>
         </section>
     )
 };
