@@ -12,7 +12,7 @@ interface IcartItemsProps {
 
 const CartItemRootCarousel = ({ info, qty }: IcartItemsProps) => {
     return (
-        <Suspense>
+        <Suspense >
             <Container>
                 <section
                     className="w-[90%]  max-w-[900px] mx-auto mt-10 p-6 

@@ -54,7 +54,7 @@ const Cart = () => {
     if (loading) return <div>در حال بارگذاری...</div>
 
     return (
-        <Suspense>
+        <Suspense fallback={loading}>
             <section >
                 <Countainer>
                     <h2 className="font-bold">سبد خرید</h2>
@@ -64,22 +64,18 @@ const Cart = () => {
                         if (!product && !carouselItem) return null  /// اگر محصولی نبود null برگردون
                         if (carouselItem?.DiscountedPrice) {
                             return (
-                                <Suspense key={item.id}>
-                                    <div>
-                                        <CartItemRootCarousel info={carouselItem} qty={item.qty} />
-                                    </div>
-                                </Suspense>
+                                <div key={item.id}>
+                                    <CartItemRootCarousel info={carouselItem} qty={item.qty} />
+                                </div>
                             )
                         }
                         //// وقتی دوتا حالت کاملا متفاوت داریم دوتا return باید باشه
 
                         // ! یعنی قطعا وجود داره
                         return (
-                            <Suspense key={item.id}>
-                                <div >
-                                    <CartItem info={product!} qty={item.qty} />
-                                </div>
-                            </Suspense>
+                            <div key={item.id}>
+                                <CartItem info={product!} qty={item.qty} />
+                            </div>
                         )
                     })}
                     <div className="mt-5">
