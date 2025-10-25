@@ -54,8 +54,8 @@ const Cart = () => {
     if (loading) return <div>در حال بارگذاری...</div>
 
     return (
-        <section >
-            <Suspense>
+        <Suspense>
+            <section >
                 <Countainer>
                     <h2 className="font-bold">سبد خرید</h2>
                     {ProductItems.map((item) => {
@@ -88,8 +88,8 @@ const Cart = () => {
                         )}
                     </div>
                 </Countainer>
-            </Suspense>
-        </section>
+            </section >
+        </Suspense>
     )
 };
 export default Cart;
