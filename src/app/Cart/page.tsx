@@ -1,12 +1,12 @@
 "use client"
-import { useShoppingCartContext } from "../Context/ShoppingCartContext";
+import { useShoppingCartContext } from "../(main)/Context/ShoppingCartContext";
 import { useEffect, useState, Suspense } from "react";
-import Countainer from "../../Container";
-import { RootCarousel } from "../components/mainPage/helper/swipercarsouel";
-import CartItem from "../components/(products)/CartItems";
+import Countainer from "../Container";
+import { RootCarousel } from "../(main)/components/mainPage/helper/swipercarsouel";
+import CartItem from "../(main)/components/(products)/CartItems";
 import { formatNumberWithCommas } from "@/utils/number";
 import axios from "axios";
-import CartItemRootCarousel from "../components/(products)/CartItemsRootCarousel";
+import CartItemRootCarousel from "../(main)/components/(products)/CartItemsRootCarousel";
 
 const Cart = () => {
     const { ProductItems } = useShoppingCartContext() /// تعداد و ایدی محصول
