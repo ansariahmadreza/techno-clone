@@ -64,8 +64,8 @@ const Cart = () => {
                         if (!product && !carouselItem) return null  /// اگر محصولی نبود null برگردون
                         if (carouselItem?.DiscountedPrice) {
                             return (
-                                <Suspense key={item.id}>
-                                    <div>
+                                <Suspense>
+                                    <div key={item.id}>
                                         <CartItemRootCarousel info={carouselItem} qty={item.qty} />
                                     </div>
                                 </Suspense>
@@ -75,8 +75,8 @@ const Cart = () => {
 
                         // ! یعنی قطعا وجود داره
                         return (
-                            <Suspense key={item.id}>
-                                <div >
+                            <Suspense>
+                                <div key={item.id} >
                                     <CartItem info={product!} qty={item.qty} />
                                 </div>
                             </Suspense>
