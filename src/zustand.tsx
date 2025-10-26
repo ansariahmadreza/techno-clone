@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { RegisterFormData } from "@/utils/valid";
-import { RegisterFormData2 } from "./app/(auth)/login/exsitingUser/page";
+import { RegisterFormData2 } from "./app/(auth)/login/ExsitingUser/page";
 
 
 interface UserState {
