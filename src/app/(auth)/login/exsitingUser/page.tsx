@@ -5,7 +5,7 @@ import cookie from "js-cookie";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useUserStore } from "@/zustand";
-import { userSchema, RegisterFormData2 } from "@/utils/validExit";
+import { userSchema, type RegisterFormData2 } from "@/utils/validExit";
 
 const ExsitingUser = () => {
     const Router = useRouter()

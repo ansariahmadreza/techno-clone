@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import cookie from "js-cookie"
 import axios from "axios";
-import { RegisterFormData, userSchema } from "@/utils/valid";
+import { type RegisterFormData, userSchema } from "@/utils/valid";
 import Link from "next/link";
 import { useUserStore } from "../../../zustand";
 
