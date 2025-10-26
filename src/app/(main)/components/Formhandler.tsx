@@ -32,7 +32,6 @@ const Formhandler = () => {
                 setServerMessage("این کاربر قبلاً ثبت‌ نام کرده است");
                 return;
             }
-            await new Promise((resolve) => setTimeout(resolve, 1500))
             setServerMessage("ثبت نام با موفقیت انجام شد")
             setUser(data)
             handleLogin(data)

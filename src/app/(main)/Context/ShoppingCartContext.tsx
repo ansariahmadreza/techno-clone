@@ -28,6 +28,8 @@ export const useShoppingCartContext = () => {
 const ShoppingCartContextProvider = ({ children }: ShoppingCartContextProvider) => {
 
     const [ProductItems, setProductItems] = useState<ProductItems[]>([])
+    const [isLoaded, setIsLoaded] = useState(false);
+
 
     const getProductQty = (id: number) => {
         return ProductItems.find(item => item.id === id)?.qty || 0 /// مقدار qty ایتمی id با item.id برابر داره رو برگردو
@@ -77,20 +79,19 @@ const ShoppingCartContextProvider = ({ children }: ShoppingCartContextProvider) 
         });
     };
     useEffect(() => {
-        
-            const storedCartItems = localStorage.getItem("cartItems")
-
-            console.log("store",storedCartItems)
-
-            if (storedCartItems) {
-                setProductItems(JSON.parse(storedCartItems))
-                //return storedCartItems ? JSON.parse(storedCartItems) : []
-            }
-    }, [])
+        const storedCartItems = localStorage.getItem("cartItems");
+        if (storedCartItems) {
+            setProductItems(JSON.parse(storedCartItems));
+        }
+        setIsLoaded(true); // بعد از لود داده
+    }, []);
 
     useEffect(() => {
-        localStorage.setItem("cartItems", JSON.stringify(ProductItems))
-    }, [ProductItems])
+        if (isLoaded) { // فقط وقتی داده از لوکال لود شد ذخیره کن
+            localStorage.setItem("cartItems", JSON.stringify(ProductItems));
+        }
+    }, [ProductItems, isLoaded]);
+
 
     return (
         <ShoppingCartContext.Provider value={{ ProductItems, getProductQty, handleIncreaseProduct, handleDecreaseProduct, handleRemoveProduct, cartTotalQty }}>

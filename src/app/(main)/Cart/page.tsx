@@ -14,8 +14,9 @@ const Cart = () => {
     const [Carousel, setCarousel] = useState<RootCarousel[]>([]) // کل محصولات تخفیف‌دار
     const [finalPrice, setFinalPrice] = useState(0) // قیمت کل با تخفیف
     const [discountPrice, setDiscountPrice] = useState(0) // مجموع تخفیف‌ها
-    const [loading, setLoading] = useState(true)/// بررسی وضعیت لود محتوا
-
+    const [loading, setLoading] = useState(true)/// بررسی وضعیت لود 
+    
+    
     useEffect(() => {
         axios.all([
             axios.get(`http://localhost:3001/Products`),
