@@ -20,7 +20,7 @@ const Nav = () => {
         }
     }, []);
     return (
-        <Suspense>
+        <Suspense >
             <>
                 <div className={`fixed z-50 w-full top-0 transition-all duration-300
                  bg-white  

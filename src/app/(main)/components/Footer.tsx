@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <Container>
             <footer>
-                <section className="bg-gradient-to-r p-4 mt-15 mb-2 w-full min-h-[450px] 
+                <section className="bg-linear-to-r p-4 mt-15 mb-2 w-full min-h-[450px] 
              rounded-[30px]  from-blue-500 to-blue-900">
                     <Link href={"https://www.technolife.com/"}>
                         <img src="/../Logos/1.svg" alt="logo" className="mt-15 mr-6 w-[180px] h-[100px] mx-auto md:mx-0" />
