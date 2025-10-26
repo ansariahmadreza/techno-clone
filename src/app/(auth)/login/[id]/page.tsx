@@ -12,7 +12,7 @@ const Profileuser = async ({ params }: RootProps) => {
 
     return (
         <div className="mt-[200px] shadow-2xl text-center w-[400px] mx-auto h-[100px] border-neutral-400 rounded  border">
-            <section className="mt-[20px]">
+            <section className="mt-5">
                 <h2 ><p className="inline-block"> حساب کاربری:</p>{infoUser.namefamily}</h2>
                 <h4> <p className="inline-block"> ادرس ایمیل:</p>{infoUser.email}</h4>
             </section>

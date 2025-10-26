@@ -16,11 +16,11 @@ const Login = () => {
 
             <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-5">
                 <img src="../Logos/static_logo_techno_new.svg" alt="static_logo" className="w-[150px] mx-auto pt-[50px]" />
-                <h2 className="pt-[40px] text-[18px] text-center font-bold">
+                <h2 className="pt-10 text-[18px] text-center font-bold">
                     ورود | ثبت نام
                 </h2>
 
-                <h3 className="text-center pt-[40px] font-bold text-[15px]">  خوش اومدی :)</h3>
+                <h3 className="text-center pt-10 font-bold text-[15px]">  خوش اومدی :)</h3>
 
                 <div className="w-full mt-6 flex justify-center"><Formhandler /></div>
             </div>

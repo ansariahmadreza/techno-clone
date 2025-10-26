@@ -27,7 +27,7 @@ const TopHeader = () => {
             <div className="flex justify-between items-center my-5" >
                 <div className="flex items-center ">
                     <Link href={"/"}>
-                        <img className="pl-7 cursor-pointer w-36 h-[40px] hidden sm:inline-block" src="../icons/static_logo_techno_new.svg" title="Technolife" />
+                        <img className="pl-7 cursor-pointer w-36 h-10 hidden sm:inline-block" src="../icons/static_logo_techno_new.svg" title="Technolife" />
                     </Link>
                     <Search />
                 </div>
@@ -35,7 +35,7 @@ const TopHeader = () => {
                 <div className="flex items-center ">
                     {
                         userCookie ?
-                            <Link href={"/login"} target="_blank" className={`${`cooke ? "w-[50px] pl-[20px] " : ""  `} mt-2 text-center`}>
+                            <Link href={"/login"} target="_blank" className={`${`cooke ? "w-[50px] pl-5 " : ""  `} mt-2 text-center`}>
                                 <DropdownProfile />
                             </Link>
                             :
@@ -44,9 +44,9 @@ const TopHeader = () => {
                             </Link>
                     }
                     <Link href={"/Cart"}>
-                        <IoCartOutline className="border-1 border-neutral-400 w-[30px] h-[30px]  rounded " title="سبد خرید"></IoCartOutline>
+                        <IoCartOutline className="border border-neutral-400 w-[30px] h-[30px]  rounded " title="سبد خرید"></IoCartOutline>
                         <div className="fixed">
-                            <span className={`text-white bg-blue-800  bottom-[-13px] right-[-8px] rounded-md absolute w-[20px] text-center
+                            <span className={`text-white bg-blue-800  bottom-[-13px] -right-2 rounded-md absolute w-5 text-center
                                  ${!cartTotalQty ? "opacity-0" : "opacity-100"}`}>
                                 {cartTotalQty}
                             </span>

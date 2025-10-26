@@ -45,8 +45,8 @@ const SwiperCarousel = ({ Carousel }: { Carousel: RootCarousel[] }) => {
                         {Carousel.map((item) =>
                             <SwiperSlide key={item.id} className="border-r sm:h-[870px]   border-neutral-300 px-2 py-4  mt-15 relative">
                                 <Link href={`/${item.id}`}>
-                                    <span className="text-rose-800 text-xl pr-3.5 mr-[10px]"> تخفیف</span>
-                                    <span className=" float-left text-rose-800 ml-[20px] text-center mr-2  p-0.5 rounded">{item.Discountpercentage}%</span>
+                                    <span className="text-rose-800 text-xl pr-3.5 mr-2.5"> تخفیف</span>
+                                    <span className=" float-left text-rose-800 ml-5 text-center mr-2  p-0.5 rounded">{item.Discountpercentage}%</span>
                                     <img loading="lazy" className=" rounded-sm w-[180] h-[140px]  border-red-500 border-t-5 mx-auto cursor-pointer "
                                         src={item.image} alt={item.description} title={item.description} />
                                     <p className="h-[90px]  py-2 mx-auto px-1">{item.description}</p>

@@ -1,12 +1,12 @@
 "use client"
-import { useShoppingCartContext } from "../(main)/Context/ShoppingCartContext";
+import { useShoppingCartContext } from "../Context/ShoppingCartContext";
 import { useEffect, useState, Suspense } from "react";
-import Countainer from "../Container";
-import { RootCarousel } from "../(main)/components/mainPage/helper/swipercarsouel";
-import CartItem from "../(main)/components/(products)/CartItems";
+import Countainer from "../../Container";
+import { RootCarousel } from "../components/mainPage/helper/swipercarsouel";
+import CartItem from "../components/(products)/CartItems";
 import { formatNumberWithCommas } from "@/utils/number";
 import axios from "axios";
-import CartItemRootCarousel from "../(main)/components/(products)/CartItemsRootCarousel";
+import CartItemRootCarousel from "../components/(products)/CartItemsRootCarousel";
 
 const Cart = () => {
     const { ProductItems } = useShoppingCartContext() /// تعداد و ایدی محصول
@@ -39,7 +39,7 @@ const Cart = () => {
     useEffect(() => {
         if (!loading) {
             const discountItems = Carousel.filter(c =>  ///پیدا  کردن محصولی که دارای تخفیف هست
-                ProductItems.some(p => p.id.toString() === c.id)
+                ProductItems?.some(p => p.id.toString() === c.id)
             )
             //قیمت کل با تخفیف
             const discountTotal = discountItems.reduce((sumDiscountPrice, item) => {
@@ -58,7 +58,7 @@ const Cart = () => {
             <section >
                 <Countainer>
                     <h2 className="font-bold">سبد خرید</h2>
-                    {ProductItems.map((item) => {
+                    {ProductItems?.map((item) => {
                         const product = products.find(p => p.id === item.id.toString())
                         const carouselItem = Carousel.find(c => c.id === item.id.toString())
                         if (!product && !carouselItem) return null  /// اگر محصولی نبود null برگردون
