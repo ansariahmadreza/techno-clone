@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useUserStore } from "@/zustand";
 import { userSchema, type RegisterFormData2 } from "@/utils/validExit";
 
-const ExsitingUser = () => {
+const page = () => {
     const Router = useRouter()
     const { setUser2 } = useUserStore()
 
@@ -49,4 +49,4 @@ const ExsitingUser = () => {
     )
 }
 
-export default ExsitingUser;
+export default page;
