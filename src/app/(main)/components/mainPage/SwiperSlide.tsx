@@ -31,8 +31,8 @@ const Swiperslide = ({ imgSlider }: { imgSlider: Rootimg[] }) => {
                 {imgSlider.map((item) =>
                     <SwiperSlide key={item.id}
                         className="overflow-hidden w-full ">
-                        <div className="relative w-full aspect-[16/6] sm:aspect-[16/5]
-                        md:aspect-[16/4.5] lg:aspect-[16/4]">
+                        <div className="relative w-full aspect-16/6 sm:aspect-16/5
+                        md:aspect-[16/4.5] lg:aspect-16/4">
                             <img className="absolute inset-0 w-full h-full object-fill transition-all duration-500" src={item.image} alt={item.alt} title={item.alt} />
                         </div>
                     </SwiperSlide>
@@ -42,15 +42,15 @@ const Swiperslide = ({ imgSlider }: { imgSlider: Rootimg[] }) => {
                 <div className="button-prev-slide absolute
                 top-1/2 
                 -translate-y-1/2 left-2 sm:left-4 z-10
-                w-[36px] h-[36px] sm:w-[44px] sm:h-[44px] grid place-items-center
+                w-9 h-9 sm:w-11 sm:h-11 grid place-items-center
                 rounded-full bg-black/50 text-white opacity-0 
                 group-hover:opacity-100 transition-all duration-300 ">
                     <AiOutlineArrowRight  className="text-xl"/>
                 </div>
 
                 <div className="button-next-slide absolute top-1/2
-                 -translate-y-1/2 right-2 sm:right-4 z-10 w-[36px]
-                  h-[36px] sm:w-[44px] sm:h-[44px] grid place-items-center 
+                 -translate-y-1/2 right-2 sm:right-4 z-10 w-9
+                  h-9 sm:w-11 sm:h-11 grid place-items-center 
                   rounded-full bg-black/50 text-white opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <AiOutlineArrowLeft  className="text-xl"/>
                 </div>

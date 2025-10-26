@@ -51,10 +51,10 @@ const DropdownProfile = () => {
     return (
         <div onMouseLeave={() => setHover(false)} onMouseOver={() => { setHover(true) }}>
             <DropdownMenu dir="rtl" open={hover} onOpenChange={setHover} >
-                <DropdownMenuTrigger onClick={handlerRedirect}><CiUser className="shadow-lg h-[28px] w-[28px] rounded" />
+                <DropdownMenuTrigger onClick={handlerRedirect}><CiUser className="shadow-lg h-7 w-7 rounded" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="ml-[80px] w-[250px]" sideOffset={1}>
-                    <section className="w-[240px] h-[110px]">
+                <DropdownMenuContent className="ml-20 w-[250px]" sideOffset={1}>
+                    <section className="w-60 h-[110px]">
                         <Link key={allData?.id} href={`/login/${allData?.id}`}>
                             <DropdownMenuItem >حساب کاربری<span className="text-[14px] text-neutral-500">{allData?.namefamily}</span></DropdownMenuItem>
                         </Link>

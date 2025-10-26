@@ -1,1 +1,1 @@
-pnpm dlx json-server --watch src/database/db.json --port 3001
+//pnpm dlx json-server --watch src/database/db.json --port 3001

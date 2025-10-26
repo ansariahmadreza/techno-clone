@@ -1,17 +1,11 @@
 "use client"
 import axios from "axios"
-import { useState } from "react"
 import { useRouter } from "next/navigation";
 import cookie from "js-cookie";
-import { z } from "zod";/// تعریف قوانین اعتبار سنجی فرم
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useUserStore } from "@/zustand";
-
-export const userSchema = z.object({/// تعریف یک ابجکت از z که دارای مقادیر و قوانین زیر است
-    email: z.string().email("ایمیل معتبر نیست"),
-})
-export type RegisterFormData2 = z.infer<typeof userSchema> /// ساخت یک تایپ اختصاصی که بر اساس قوانین ابجکتی که در بالا با درنظر گرفتن قوانین zod ساختیم
+import { RegisterFormData2, userSchema } from "@/utils/validExit";
 
 
 const ExsitingUser = () => {
@@ -30,8 +24,6 @@ const ExsitingUser = () => {
         handler(data)
         setUser2(data)
     };
-
-
 
     const handler = async (item: RegisterFormData2) => {
         const checkEmailUser = await axios.get(`http://localhost:3001/users?email=${item?.email}`);

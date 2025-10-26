@@ -1,4 +1,3 @@
-
 import "../globals.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -19,7 +18,7 @@ export default function Mainayout({ children }: { children: React.ReactNode }) {
       <ShoppingCartContextProvider>
         <div className="flex flex-col min-h-screen">
           <Nav />
-          <main className="flex-1 flex-grow font-serif min-h-[980px]" dir="rtl" lang="fa" >
+          <main className="flex-1 grow font-serif min-h-[980px]" dir="rtl" lang="fa" >
             {children}
           </main>
 
