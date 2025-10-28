@@ -45,9 +45,12 @@ const Formhandler = () => {
             export: 365
         }
         cookie.set('token', response.token, { expires: response.export })
+
+        const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
         await axios({
             method: "POST",
-            url: "http://localhost:3001/users",
+            url: `${API_URL}/users`,
             data: {
                 id: Math.floor(Math.random() * 100000).toString(),
                 namefamily: user.name,
