@@ -22,9 +22,9 @@ export default function Mainayout({ children }: { children: React.ReactNode }) {
           </main>
 
         </div>
-               <div className="min-h-[450px] max-h-[500px]">
-            <Footer />
-          </div>
+        <div className="min-h-[450px] max-h-[500px]">
+          <Footer />
+        </div>
       </ShoppingCartContextProvider>
     </>
   );
