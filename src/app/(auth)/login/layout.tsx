@@ -1,5 +1,3 @@
-import "../../globals.css";
-
 function LoginLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
