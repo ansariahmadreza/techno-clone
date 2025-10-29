@@ -2,7 +2,7 @@
 import { useShoppingCartContext } from "../Context/ShoppingCartContext";
 import { useEffect, useState, Suspense } from "react";
 import Countainer from "../../Container";
-import { RootCarousel } from "../components/mainPage/helper/swipercarsouel";
+import { RootCarousel } from "../components/mainPage/helper/Swipercarsouel";
 import CartItem from "../components/(products)/CartItems";
 import { formatNumberWithCommas } from "@/utils/number";
 import axios from "axios";

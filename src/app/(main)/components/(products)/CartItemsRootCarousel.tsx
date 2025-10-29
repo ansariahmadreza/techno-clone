@@ -1,6 +1,6 @@
 "use client";
 import { formatNumberWithCommas } from "@/utils/number";
-import { RootCarousel } from "../mainPage/helper/swipercarsouel";
+import { RootCarousel } from "../mainPage/helper/Swipercarsouel";
 import AddToCart from "./AddToCart";
 import Container from "../../../Container";
 import { Suspense } from "react";

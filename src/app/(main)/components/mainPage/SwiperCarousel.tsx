@@ -1,5 +1,5 @@
 "use client"
-import { RootCarousel } from "./helper/swipercarsouel";
+import { RootCarousel } from "./helper/Swipercarsouel";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/swiper-bundle.css";
