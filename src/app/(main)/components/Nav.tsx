@@ -3,7 +3,7 @@ import Link from "next/link";
 import Container from "../../Container";
 import { SlWallet } from "react-icons/sl";
 import { Suspense, useEffect, useState } from "react";
-import TopHeader from "./topHeader";
+import TopHeader from "./ToppHeader";
 import { Menu, X } from "lucide-react";
 
 
@@ -26,7 +26,7 @@ const Nav = () => {
                  bg-white  
                  ${header ? "h-[90px] w-full" : "h-[135px]"}`} >
                     <Container>
-                        <TopHeader />
+                        <TopHeader/>
                         <nav className={`flex items-center  justify-between
                      transition-all duration-300 w-full
                     ${header ? "opacity-0 -translate-y-5 "

@@ -2,7 +2,6 @@
 import { useForm } from "react-hook-form"; ///برای مدیریت فرم و گرفتن داده ها
 import { zodResolver } from "@hookform/resolvers/zod";/// وصل کردن قوانین zod به react hook form
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import cookie from "js-cookie"
 import axios from "axios";
 import { type RegisterFormData, userSchema } from "@/utils/valid";
@@ -11,7 +10,6 @@ import { useUserStore } from "../../../zustand";
 
 const Formhandler = () => {
     const [serverMessage, setServerMessage] = useState('')/// نمایش پیغام ثبت نام موفقیت امیز بود
-    const Router = useRouter()
     const { setUser } = useUserStore()
 
     /// به صورت کلی یه فرم بساز که فیلد هاش طبق registerFormData باشن و اعتبار سنجی طبق userSchema با zod انجام بشه
@@ -59,7 +57,7 @@ const Formhandler = () => {
                 confrimPassword: user.confirmPassword
             }
         })
-        Router.push('/')
+        window.location.href="/"
     }
 
     return (

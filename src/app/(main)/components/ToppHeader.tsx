@@ -3,10 +3,10 @@ import Link from "next/link"
 import Container from "../../Container"
 import { IoCartOutline } from "react-icons/io5";
 import { useShoppingCartContext } from "../Context/ShoppingCartContext";
-import Search from "../search";
 import cookie from "js-cookie"
 import { useEffect, useState } from "react";
 import DropdownProfile from "../../dropdownMenu";
+import Search from "../Search";
 
 const TopHeader = () => {
 
@@ -29,7 +29,7 @@ const TopHeader = () => {
                     <Link href={"/"}>
                         <img className="pl-7 cursor-pointer w-36 h-10 hidden sm:inline-block" src="../icons/static_logo_techno_new.svg" title="Technolife" />
                     </Link>
-                    <Search />
+                    <Search/>
                 </div>
 
                 <div className="flex items-center ">

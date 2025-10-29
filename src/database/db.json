@@ -200,20 +200,7 @@
       "email": "ahmadreza.an.dev@gmail.com",
       "password": "123456A",
       "confrimPassword": "123456A"
-    },
-    {
-      "id": "21356",
-      "namefamily": "sara",
-      "email": "sara@gmail.com",
-      "password": "123456A",
-      "confrimPassword": "123456A"
-    },
-    {
-      "id": "439",
-      "namefamily": "akbar",
-      "email": "akbar@gmail.com",
-      "password": "123456A",
-      "confrimPassword": "123456A"
     }
+  
   ]
 }
