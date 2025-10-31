@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start --webpack",
     "lint": "eslint"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "axios": "^1.11.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv-flow": "^4.1.0",
     "framer-motion": "^12.23.19",
     "gsap": "^3.13.0",
     "i18next": "^25.5.2",
