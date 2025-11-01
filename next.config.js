@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-
-  webpack: (config) => {
-    config.cache = false; // جلوگیری از ارور Bus error در build
+  webpack: (config, { isServer }) => {
+    // هر تغییر دلخواه تو config
+    return config; // ⚠ حتما config باید return بشه
   },
 };
 
