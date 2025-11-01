@@ -1,6 +1,6 @@
 import { formatNumberWithCommas } from "@/utils/number";
 import AddToCart from "../../components/(products)/AddToCart"
-import { RootCarousel } from "../../components/mainPage/helper/Swipercarsouel";
+import { RootCarousel } from "../../components/mainPage/helper/swipercarsouel";
 
 interface RootProps {
     params: Promise<{ id: string }>

@@ -6,7 +6,7 @@ import { useShoppingCartContext } from "../Context/ShoppingCartContext";
 import cookie from "js-cookie"
 import { useEffect, useState } from "react";
 import DropdownProfile from "../../dropdownMenu";
-import Search from "../Search";
+import Search from "../search";
 
 
 

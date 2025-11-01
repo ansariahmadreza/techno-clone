@@ -5,7 +5,7 @@ import "swiper/swiper-bundle.css"
 import "swiper/swiper.css"
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { Rootimg } from "./helper/Swiperslide"
+import { Rootimg } from "./helper/swiperslide"
 
 
 const Swiperslide = ({ imgSlider }: { imgSlider: Rootimg[] }) => {

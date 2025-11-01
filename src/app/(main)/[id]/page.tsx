@@ -1,6 +1,6 @@
 import { formatNumberWithCommas } from "@/utils/number";
 import AddToCart from "../components/(products)/AddToCart";
-import { RootCarousel } from "../components/mainPage/helper/Swipercarsouel";
+import { RootCarousel } from "../components/mainPage/helper/swipercarsouel";
 
 
 export interface RootProps {///بعد از اینکه وارد یک صفحه داینامیک میشی از این طریق id رو میگیری و اطلاعات محصول رو بالا میاری

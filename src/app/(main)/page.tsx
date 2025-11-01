@@ -1,6 +1,8 @@
 import Container from "../Container";
-import SwiperCar from "./components/mainPage/helper/Swipercarsouel";
-import Slider from "./components/mainPage/helper/Swiperslide";
+import SwiperCar from "./components/mainPage/helper/swipercarsouel";
+import Slider from "./components/mainPage/helper/swiperslide";
+
+
 
 
 const home = () => {

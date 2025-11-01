@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { RootProduct } from "../components/mainPage/helper/Swipercarsouel";
+import { RootProduct } from "../components/mainPage/helper/swipercarsouel";
 import Link from "next/link";
 import { formatNumberWithCommas } from "@/utils/number";
 import { FaStar } from "react-icons/fa";
