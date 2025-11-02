@@ -6,7 +6,8 @@
     "dev": "next dev ",
     "build": "next build --webpack",
     "start": "next start ",
-    "lint": "eslint"
+    "lint": "eslint",
+    "json-server": "json-server --watch db.json --port 3001"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.27.0",
