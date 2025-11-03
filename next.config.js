@@ -2,7 +2,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // experimental: {
-  //   turbo: true, // <-- حذف یا کامنت
+  //   turbo: true,
   // },
 };
 
