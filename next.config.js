@@ -1,8 +1,9 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: false, // غیرفعال کردن Turbopack
-  },
-}
+  // experimental: {
+  //   turbo: true, // <-- حذف یا کامنت
+  // },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
