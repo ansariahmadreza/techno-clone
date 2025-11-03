@@ -24,8 +24,9 @@ const Formhandler = () => {
     ///شبیه سازی وضعیت بک اند
     const onSubmit = async (data: RegisterFormData) => {
         try {
+            const baseUrl = process.env.NEXT_PUBLIC_API_URL;
             setServerMessage("")
-            const checkEmailUser = await axios.get(`http://localhost:3001/users?email=${data.email}`);
+            const checkEmailUser = await axios.get(`${baseUrl}/users?email=${data.email}`);
             if (checkEmailUser.data.length > 0) {
                 setServerMessage("این کاربر قبلاً ثبت‌ نام کرده است");
                 return;
@@ -57,7 +58,7 @@ const Formhandler = () => {
                 confrimPassword: user.confirmPassword
             }
         })
-        window.location.href="/"
+        window.location.href = "/"
     }
 
     return (

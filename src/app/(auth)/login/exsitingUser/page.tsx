@@ -21,8 +21,9 @@ const page = () => {
     };
 
     const handler = async (item: RegisterFormData2) => {
-        
-        const checkEmailUser = await axios.get(`http://localhost:3001/users?email=${item?.email}`);
+
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+        const checkEmailUser = await axios.get(`${baseUrl}/users?email=${item?.email}`);
 
         if (checkEmailUser.data.length > 0) {
             const response = { token: 'sdgsdgxvcxcv', export: 365 }

@@ -7,8 +7,9 @@ export interface Rootimg {
 };
 const Slider = async () => {
 
-    const imgSlider: Rootimg[] = await fetch("http://localhost:3001/ProductSlider",{
-        cache:"no-store"
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+    const imgSlider: Rootimg[] = await fetch(`${baseUrl}/ProductSlider`, {
+        cache: "no-store"
     }).then(res => res.json())
     return <Swiperslide imgSlider={imgSlider} />
 };

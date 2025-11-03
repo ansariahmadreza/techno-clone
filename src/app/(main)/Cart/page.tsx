@@ -15,12 +15,13 @@ const Cart = () => {
     const [finalPrice, setFinalPrice] = useState(0) // قیمت کل با تخفیف
     const [discountPrice, setDiscountPrice] = useState(0) // مجموع تخفیف‌ها
     const [loading, setLoading] = useState(true)/// بررسی وضعیت لود 
-    
-    
+
+
     useEffect(() => {
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL;
         axios.all([
-            axios.get(`http://localhost:3001/Products`),
-            axios.get(`http://localhost:3001/Carousel`)
+            axios.get(`${baseUrl}/Products`),
+            axios.get(`${baseUrl}/Carousel`)
         ]).then(
             axios.spread((productsRes, carouselRes) => {
                 setProducts(productsRes.data)

@@ -22,7 +22,8 @@ const DropdownProfile = () => {
     const { user, user2 } = useUserStore()
 
     useEffect(() => {
-        axios.get("http://localhost:3001/users").then(res => {
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+        axios.get(`${baseUrl}/users`).then(res => {
             const { data } = res
             setLastUser(data)
         })

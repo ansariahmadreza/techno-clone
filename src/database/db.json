@@ -202,16 +202,9 @@
       "confrimPassword": "123456A"
     },
     {
-      "id": "69858",
+      "id": "2168",
       "namefamily": "reza",
       "email": "reza@gmail.com",
-      "password": "123456A",
-      "confrimPassword": "123456A"
-    },
-    {
-      "id": "35161",
-      "namefamily": "test",
-      "email": "test@gmail.com",
       "password": "123456A",
       "confrimPassword": "123456A"
     }

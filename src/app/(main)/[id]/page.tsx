@@ -10,7 +10,8 @@ export interface RootProps {///بعد از اینکه وارد یک صفحه د�
 const Store = async ({ params }: RootProps) => {
 
     const { id } = await params;
-    const result: RootCarousel = await fetch(`http://localhost:3001/Carousel/${id}`, { cache: "no-cache" }).then(res => res.json());
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+    const result: RootCarousel = await fetch(`${baseUrl}/Carousel/${id}`, { cache: "no-cache" }).then(res => res.json());
     const Purchaseprofit = result.Price - result.DiscountedPrice
     return (
         <>

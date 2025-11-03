@@ -20,8 +20,9 @@ const Products = async ({ searchParams }: IStoreProps) => {
   const per_page = (await searchParams).per_page ?? "6";
   const title = (await searchParams).title ?? "";
 
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL;
   const res = await fetch(
-    `http://localhost:3001/Products?_page=${page}&_per_page=${per_page}&title=${title}`
+    `${baseUrl}/Products?_page=${page}&_per_page=${per_page}&title=${title}`
   );
   const info = (await res.json()) as RootProduct;
 
@@ -45,7 +46,7 @@ const Products = async ({ searchParams }: IStoreProps) => {
               <Link key={item.id} href={`/store/${item.id}`} target="_blank">
                 <section className="flex flex-col justify-between bg-white shadow-lg rounded-2xl border hover:shadow-xl transition p-4 h-full">
                   <h2 className="text-gray-600 text-sm mb-2 line-clamp-1">{item.title}</h2>
-                  <img  className="w-40 h-32 object-contain mx-auto mb-3" src={item.image} alt={item.description} referrerPolicy="no-referrer" loading="lazy" title={item.description} />
+                  <img className="w-40 h-32 object-contain mx-auto mb-3" src={item.image} alt={item.description} referrerPolicy="no-referrer" loading="lazy" title={item.description} />
                   <div className="flex justify-center items-center gap-1 text-gray-800 font-semibold">
                     <span>{formatNumberWithCommas(item.Price)}</span>
                     <span className="text-sm">تومان</span>

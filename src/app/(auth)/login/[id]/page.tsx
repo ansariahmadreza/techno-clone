@@ -8,7 +8,8 @@ export const metadata: Metadata = {
 
 const Profileuser = async ({ params }: RootProps) => {
     const { id } = await params
-    const infoUser: infoUsers = await fetch(`http://localhost:3001/users/${id}`).then(res => res.json())
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+    const infoUser: infoUsers = await fetch(`${baseUrl}/users/${id}`).then(res => res.json())
 
     return (
         <div className="mt-[200px] shadow-2xl text-center w-[400px] mx-auto h-[100px] border-neutral-400 rounded  border">

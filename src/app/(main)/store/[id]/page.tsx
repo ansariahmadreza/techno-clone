@@ -8,7 +8,8 @@ interface RootProps {
 }
 const Store = async ({ params }: RootProps) => {
     const { id } = await params;
-    const result: RootCarousel = await fetch(`http://localhost:3001/Products/${id}`, { cache: "no-cache" }).then(res => res.json());
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+    const result: RootCarousel = await fetch(`${baseUrl}/Products/${id}`, { cache: "no-cache" }).then(res => res.json());
     return (
         <section>
             <title>{result.description}</title>
