@@ -22,8 +22,8 @@ export interface RootProduct {
 };
 
 const SwiperCar = async () => {
-
-    const Carousel: RootCarousel[] = await fetch("http://localhost:3001/Carousel", {
+ const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+    const Carousel: RootCarousel[] = await fetch(`${baseUrl}/Carousel`, {
         cache: 'no-store'
     }).then(res => res.json());
     return <SwiperCarousel Carousel={Carousel} />
