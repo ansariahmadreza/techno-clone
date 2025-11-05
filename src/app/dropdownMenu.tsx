@@ -56,7 +56,7 @@ const DropdownProfile = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="ml-20 w-[250px]" sideOffset={1}>
                     <section className="w-60 h-[110px]">
-                        <Link key={allData?.id} href={`/login/${allData?.id}`}>
+                        <Link key={allData?.id} href={`login/${allData?.id}`}>
                             <DropdownMenuItem >حساب کاربری<span className="text-[14px] text-neutral-500">{allData?.namefamily}</span></DropdownMenuItem>
                         </Link>
                         <DropdownMenuSeparator />
