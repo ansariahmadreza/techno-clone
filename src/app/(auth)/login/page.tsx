@@ -13,7 +13,6 @@ const Login = () => {
                 <img src="../Logos/logo-Login.webp" alt="logo-Login" className="w-full md:w-[1100px] h-[300px] sm:h-[400px] md:h-[742px] object-cover object-center" />
             </div>
 
-
             <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-5">
                 <img src="../Logos/static_logo_techno_new.svg" alt="static_logo" className="w-[150px] mx-auto pt-[50px]" />
                 <h2 className="pt-10 text-[18px] text-center font-bold">
