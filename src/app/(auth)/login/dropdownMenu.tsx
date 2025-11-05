@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
-import { useUserStore } from "../zustand";
+import { useUserStore } from "../../../zustand";
 
 
 export interface infoUsers {

@@ -5,7 +5,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { useShoppingCartContext } from "../Context/ShoppingCartContext";
 import cookie from "js-cookie"
 import { useEffect, useState } from "react";
-import DropdownProfile from "../../dropdownMenu";
+import DropdownProfile from "../../(auth)/login/dropdownMenu";
 import Search from "../search";
 
 
