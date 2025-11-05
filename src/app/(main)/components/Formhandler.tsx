@@ -72,7 +72,7 @@ const Formhandler = () => {
                 {errors.password && <p>{errors.password.message}</p>}
                 <input type="password" {...register("confirmPassword")} className="outline-0 border rounded p-1 w-[300px]" placeholder="تکرار رمز عبور" />
                 {errors.confirmPassword && (<p>{errors.confirmPassword.message}</p>)}
-                <Link href={"login/ExistingUser"} className="text-[14px]">در صورتی که ثبت نام کرده اید از اینجا وارد شوید</Link>
+                <Link href={"./ExistingUser"} className="text-[14px]">در صورتی که ثبت نام کرده اید از اینجا وارد شوید</Link>
                 <button type="submit"
                     disabled={isSubmitting}
                     className={`p-1 text-white rounded-lg cursor-pointer mt-9 ${isSubmitting ? "bg-gray-400" : "bg-blue-600 hover:bg-blue-700"}`}
