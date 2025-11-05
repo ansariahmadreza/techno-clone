@@ -1,5 +1,5 @@
 import { RootProps } from "@/app/(main)/[id]/page";
-import { infoUsers } from "@/app/(auth)/login/dropdownMenu";
+import { infoUsers } from "@/app/(main)/components/dropdownMenu";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

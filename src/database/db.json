@@ -194,6 +194,12 @@
     }
   ],
   "users": [
-
+    {
+      "id": "84043",
+      "namefamily": "Ahmadreza ansari",
+      "email": "ahmadreza.an.dev@gmail.com",
+      "password": "123456A",
+      "confrimPassword": "123456A"
+    }
   ]
 }
