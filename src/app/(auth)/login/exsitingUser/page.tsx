@@ -21,13 +21,19 @@ const page = () => {
     };
 
     const handler = async (item: RegisterFormData2) => {
+        try {
+            const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+            const checkEmailUser = await axios.get(`${baseUrl}/users?email=${item?.email}`);
 
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL;
-        const checkEmailUser = await axios.get(`${baseUrl}/users?email=${item?.email}`);
-        if (checkEmailUser.data.length > 0) {
-            const response = { token: 'sdgsdgxvcxcv', export: 365 }
-            cookie.set('token', response.token, { expires: response.export })
-            Router.push('/')
+            if (checkEmailUser.data.length > 0) {
+                const response = { token: 'sdgsdgxvcxcv', export: 365 }
+                cookie.set('token', response.token, { expires: response.export })
+                Router.push('/')
+            }else{
+                alert("کاربر با این ایمیل پیدا نشد")
+            }
+        } catch (err) {
+            alert("خطا در اتصال")
         }
     }
 

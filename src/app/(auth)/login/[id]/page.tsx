@@ -9,16 +9,25 @@ export const metadata: Metadata = {
 const Profileuser = async ({ params }: RootProps) => {
     const { id } = await params
     const baseUrl = process.env.NEXT_PUBLIC_API_URL;
-    const infoUser: infoUsers = await fetch(`${baseUrl}/users/${id}`).then(res => res.json())
+    try {
 
-    return (
-        <div className="mt-[200px] shadow-2xl text-center w-[400px] mx-auto h-[100px] border-neutral-400 rounded  border">
-            <section className="mt-5">
-                <h2 ><p className="inline-block"> حساب کاربری:</p>{infoUser.namefamily}</h2>
-                <h4> <p className="inline-block"> ادرس ایمیل:</p>{infoUser.email}</h4>
-            </section>
-        </div>
-    )
+        const res = await fetch(`${baseUrl}/users/${id}`)
+        if (!res) {
+            return <div>کاربری با این شناسه یافت نشد</div>
+        }
+        const infoUser: infoUsers = await res.json()
+        return (
+            <div className="mt-[200px] shadow-2xl text-center w-[400px] mx-auto h-[100px] border-neutral-400 rounded  border">
+                <section className="mt-5">
+                    <h2 ><p className="inline-block"> حساب کاربری:</p>{infoUser.namefamily}</h2>
+                    <h4> <p className="inline-block"> ادرس ایمیل:</p>{infoUser.email}</h4>
+                </section>
+            </div>
+        )
+
+    } catch (err) {
+        return <div>خطا در اتصال</div>
+    }
 }
 
 export default Profileuser
