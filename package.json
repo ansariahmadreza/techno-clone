@@ -2,14 +2,12 @@
   "name": "learnnext",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev ",
     "build": "next build",
     "start": "next start ",
     "lint": "eslint",
-    "json-server": "json-server --watch src/database/db.json --port 3001",
-    "dev:server": "node --loader ts-node/esm src/server.ts"
+    "json-server": "json-server --watch src/database/db.json --port 3001"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.27.0",
